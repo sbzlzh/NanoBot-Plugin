@@ -98,7 +98,7 @@ func init() {
 		logrus.Infof("[tarot]读取%d组塔罗牌阵", len(formationMap))
 		return true
 	})
-	engine.OnMessageRegex(`^抽((塔罗牌|大阿(尔)?卡纳)|小阿(尔)?卡纳)$`, getTarot).SetBlock(true).Limit(ctxext.LimitByGroup).Handle(func(ctx *nano.Ctx) {
+	engine.OnMessageRegex(`^/抽((塔罗牌|大阿(尔)?卡纳)|小阿(尔)?卡纳)$`, getTarot).SetBlock(true).Limit(ctxext.LimitByGroup).Handle(func(ctx *nano.Ctx) {
 		cardType := ctx.State["regex_matched"].([]string)[1]
 
 		reasons := [...]string{"您抽到的是~\n", "锵锵锵，塔罗牌的预言是~\n", "诶，让我看看您抽到了~\n"}
