@@ -90,7 +90,7 @@ func init() {
 			}
 			_, _ = ctx.SendPlainMessage(false, "没有这个底图哦～")
 		})
-	en.OnMessageFullMatchGroup([]string{"运势", "抽签"}, fcext.DoOnceOnSuccess(
+	en.OnMessageFullMatchGroup([]string{"/运势", "/抽签"}, fcext.DoOnceOnSuccess(
 		func(ctx *nano.Ctx) bool {
 			data, err := file.GetLazyData(omikujson, "data/control/stor.spb", false)
 			if err != nil {
