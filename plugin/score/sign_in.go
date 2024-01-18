@@ -59,7 +59,7 @@ func init() {
 			}
 		}
 	}()
-	engine.OnMessageFullMatch("签到").Limit(ctxext.LimitByUser).SetBlock(true).Handle(func(ctx *nano.Ctx) {
+	engine.OnMessageFullMatch("/签到").Limit(ctxext.LimitByUser).SetBlock(true).Handle(func(ctx *nano.Ctx) {
 		uid := ctx.Message.Author.ID
 		if uid == "" {
 			_, _ = ctx.SendPlainMessage(false, "ERROR: 未获取到用户uid")
