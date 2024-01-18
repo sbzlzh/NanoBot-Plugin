@@ -18,7 +18,7 @@ import (
 var (
 	engine = nano.Register("qqwife", &ctrl.Options[*nano.Ctx]{
 		DisableOnDefault: false,
-		Brief:            "娶群友",
+		Brief:            "/娶群友",
 		Help: "- 娶群友\n- 群老婆列表\n" +
 			"- [允许|禁止]自由恋爱\n- [允许|禁止]牛头人\n" +
 			"- 设置CD为xx小时    →(默认12小时)\n" +
