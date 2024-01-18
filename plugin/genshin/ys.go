@@ -65,7 +65,7 @@ func init() {
 			}
 		})
 
-	engine.OnMessageFullMatch("原神十连", fcext.DoOnceOnSuccess(
+	engine.OnMessageFullMatch("/原神十连", fcext.DoOnceOnSuccess(
 		func(ctx *nano.Ctx) bool {
 			zipfile := engine.DataFolder() + "Genshin.zip"
 			_, err := engine.GetLazyData("Genshin.zip", false)
