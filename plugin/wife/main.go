@@ -22,7 +22,7 @@ func init() {
 	}).ApplySingle(ctxext.DefaultSingle)
 	_ = os.MkdirAll(engine.DataFolder()+"wives", 0755)
 	cards := []string{}
-	engine.OnMessageFullMatch("抽老婆", fcext.DoOnceOnSuccess(
+	engine.OnMessageFullMatch("/抽老婆", fcext.DoOnceOnSuccess(
 		func(ctx *nano.Ctx) bool {
 			data, err := engine.GetLazyData("wife.json", true)
 			if err != nil {
