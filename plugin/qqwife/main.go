@@ -45,7 +45,7 @@ var (
 )
 
 func init() {
-	engine.OnMessageFullMatch("娶群友", nano.OnlyChannel, getdb).SetBlock(true).Limit(ctxext.LimitByUser).Handle(func(ctx *nano.Ctx) {
+	engine.OnMessageFullMatch("/娶群友", nano.OnlyChannel, getdb).SetBlock(true).Limit(ctxext.LimitByUser).Handle(func(ctx *nano.Ctx) {
 		gid := ctx.Message.GuildID
 		uid := ctx.Message.Author.ID
 
